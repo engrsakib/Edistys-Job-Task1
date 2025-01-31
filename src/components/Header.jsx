@@ -46,7 +46,13 @@ function Header() {
       <div className="navbar max-w-7xl mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex-1">
-          <a className="text-2xl font-bold">AnyTech</a>
+          {/* <a className="text-2xl font-bold">AnyTech</a> */}
+          {
+            isSticky ? (
+              <img src="https://cdn.sanity.io/images/6jywt20u/production/70e2228631883a893695c64b637b99dc8661871c-171x28.svg?w=171&auto=format" alt="AnyTech Logo" className="h-8" />
+            ) : (
+              <img src="https://cdn.sanity.io/images/6jywt20u/production/ed83f5f1e94efb47572d503f53456dcff902b81c-200x32.svg?w=200&auto=format" alt="AnyTech Logo" className="h-8" />)
+          }
         </div>
 
         {/* Desktop Navbar Links */}
