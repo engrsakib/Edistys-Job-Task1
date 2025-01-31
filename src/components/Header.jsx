@@ -25,11 +25,11 @@ const Header = () => {
 
   const links = (
     <>
-      {["Home", "Donation requests", "Blogs", "Search donor", "Fund me"].map(
+      {["Solutions", "Services", "About Us",].map(
         (link, index) => (
           <NavLink
             key={index}
-            to={`${link == "Home" ? "/": `/${link.toLowerCase().replace(" ", "")}`}`}
+            to={`${link == "Solutions" ? "/": `/${link.toLowerCase().replace(" ", "")}`}`}
             className={({ isActive }) =>
               `px-4 py-2 rounded ${
                 isActive
@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <div
       className={`navbar ${
-        dark ? "bg-gray-900 text-gray-50" : "bg-gray-100 text-gray-900"
+        dark ? "bg-gray-900 text-gray-50" : "bg-[#0058C2] text-gray-100"
       } rounded-lg p-3 shadow-md`}
     >
       {/* Navbar Start */}
@@ -87,7 +87,7 @@ const Header = () => {
             dark ? "text-red-400" : "text-red-800"
           }`}
         >
-          BloodBridge
+          <img src="https://cdn.sanity.io/images/6jywt20u/production/ed83f5f1e94efb47572d503f53456dcff902b81c-200x32.svg?w=200&auto=format" alt="" />
         </Link>
       </div>
 
