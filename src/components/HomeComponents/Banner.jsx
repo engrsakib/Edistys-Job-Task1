@@ -1,43 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const Banner = () => {
-    return (
-      <>
-        <div
-          className="hero min-h-screen rounded-md"
-          style={{
-            backgroundImage:
-              "url(https://cdn.ittefaqbd.com/contents/cache/images/640x358x1/uploads/media/2024/06/14/eb5663459d5f5e1ad9c4fa7e0e172d2a-666c4ac8bf1e7.jpg?jadewits_media_id=173188)",
-          }}
-        >
-          <div className="hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-neutral-content text-center">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">
-                Donate Blood, Save Lives
-              </h1>
-              <p className="mb-5">
-                Blood donation is a noble act that saves countless lives. By
-                donating blood, you can help patients suffering from accidents,
-                surgeries, or life-threatening illnesses. A single donation can
-                save up to three lives. It is safe, quick, and a simple way to
-                make a significant difference in your community. Become a hero
-                today—donate blood and give the gift of life.
-              </p>
-              <div className="space-x-3">
-                <Link to={`/auth/register`} className="btn btn-primary">
-                  Join as a donor
-                </Link>
-                <Link to={"/searchdonor"} className="btn btn-secondary">
-                  Search Donors
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
-    );
+  return (
+    <div className="relative w-full h-[500px] bg-gradient-to-r from-blue-600 to-blue-400 overflow-hidden flex items-center">
+      {/* ব্যাকগ্রাউন্ড শেপ */}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-30 blur-xl"
+        animate={{ x: [0, -10, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-white">
+        {/* হেডিং */}
+        <h1 className="text-4xl font-bold leading-tight">Embrace the <br /> future of finance</h1>
+        {/* সাবহেডিং */}
+        <p className="mt-4 text-lg">
+          Reimagine financial services with AnyTech’s open platform, <br />
+          distributed banking solution that powers transformation
+        </p>
+        {/* CTA বাটন */}
+        <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition">
+          Reach Out to Us »
+        </button>
+      </div>
+
+      {/* ইমেজ */}
+      <div className="">
+      <motion.img
+        src="https://thumbs.dreamstime.com/b/smiling-medical-doctor-woman-stethoscope-isolated-over-white-background-35552912.jpg" 
+        alt="Finance Banner"
+        className="absolute bottom-0 right-10 w-80 clip-custom"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      />
+      </div>
+    </div>
+  );
 };
 
 export default Banner;

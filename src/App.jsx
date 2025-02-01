@@ -14,7 +14,7 @@ function App() {
         <Header></Header>
       </header>
 
-      <main className="container mx-auto min-h-screen">
+      <main className="mx-auto min-h-screen">
         <Outlet></Outlet>
       </main>
       <footer>

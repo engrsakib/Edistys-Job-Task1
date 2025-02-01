@@ -7,6 +7,12 @@
         @apply w-full h-full object-cover;
     }
 }
+@layer utilities{
+    .clip-custom {
+        clip-path: polygon(38% 3%, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(38% 3%, 100% 0, 100% 100%, 0 100%);
+      }
+}
 @layer base {
     .bg-header{
         background-image: url('https://cdn.deshrupantor.net/contents/cache/images/640x358x1/uploads/old/news_images/2019/06/19/Blood.jpg');
